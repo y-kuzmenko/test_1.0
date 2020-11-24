@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test site for CLEVERTEC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/41b241bddb.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <nav>
+                <input type="checkbox" id="checkbox-menu">
+                <label for="checkbox-menu">
+                    <ul class="menu touch">
+                        <li><a class="logo" href="https://github.com/y-kuzmenko/test_1.0">Look at on GitHub</a></li>
+                        <li><a href="https://www.bbc.com/russian">News</a></li>
+                        <li><a href="https://www.gismeteo.by/weather-gomel-4918/">Weather</a></li>
+                        <li><a href="http://avtoradio.by/">Radio</a></li>
+                    </ul>
+                    <span class="toggle">☰</span>
+                </label>
+            </nav>
+        </header>
+        <main class="main">
+            <div class="main-container">
+                <section class="color">
+                    <H2>COLOR</H2>
+                    <div class="colorMedia">
+                        <div id="textColor" class="text-color">
+                            <h3>This text changes color</h3>
+                            <p>Lorem ipsum dolor sit, amet <br>
+                                consectetur adipisicing elit.<br>
+                                Ullam inventore earum repudiandae, <br>
+                                doloremque dolorem fugit distinctio <br>
+                                autem incidunt, placeat sed corporis <br>
+                                vel dignissimos omnis nulla!</p>
+                        </div>
+                        <div class="text-buttons">
+                            <button id="red" class="buttonText red">RED</button>
+                            <button id="yellow" class="buttonText yellow">YELLOW</button>
+                            <button id="green" class="buttonText green">GREEN</button>
+                        </div>
+                    </div>
+                </section>
+                <section class="hide">
+                    <h2>SHOW & HIDE</h2>
+                    <div class="hide-wrapper">
+                        <div class="hiderMedia">
+                            <div id="myDiv" class="hide-text">Don't forget to add the task:</div>
+                            <input type="text" id="text">
+                        </div>
+                        <div class="hide-buttons">
+                            <input id="addCheck" type="button" value="add" class="hide-button">
+                            <input id="removeCheck" type="button" value="Remove selected" class="hide-button">
+                            <input id="hideCheck" type="button" value="Hide selected" class="hide-button">
+                            <input id="showCheck" type="button" value="Show hidden" class="hide-button">
+                        </div>
+                    </div>
+                </section>
+                <section class="animation">
+                    <h2>VINYLIZER</h2>
+                    <div class="vinylizer">
+                        <div class="vinyla">
+                            <div id="time">
+                                <span id="timer">00:00</span>
+                            </div>
+                            <div id="vinyl"></div>
+                            <div id="needle"></div>
+                        </div>
+                        <div class="vinyl-buttons">
+                            <button id="trigger">Play</button>
+                            <button id="stop" onclick="document.getElementById('player').pause()">Stop</button>
+                            <button onclick="document.getElementById('player').volume += 0.1">Vol +</button>
+                            <button onclick="document.getElementById('player').volume -= 0.1">Vol -</button>
+                        </div>
+                    </div>
+                    <audio id="player" src="audio/Scorpions 'Wind Of Change'.mp3"></audio>
+                </section>
+            </div>
+        </main>
+        <footer class="footer">
+            <button id="click-me" class="button-string">click me for get string</button>
+            <div>Select string number: <input type="number" value="1" id="page-number"></div>
+            <div id="result"></div>
+        </footer>
+        <script src="script.js"></script>
+        <script src="scriptVinyl.js"></script>
+        <script src="scriptText.js"></script>
+        <script src="scriptAJAX.js"></script>
+    </div>
+</body>
+
+</html>
